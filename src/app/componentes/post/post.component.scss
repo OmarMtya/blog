@@ -1,0 +1,84 @@
+header{
+
+  h1{
+      text-align: center;
+  }
+  a{
+      small{
+          display: block;
+          text-align: center;
+          color: var(--accent);
+          font-weight: 600;
+          text-transform: uppercase;
+      }
+  }
+  small{
+      letter-spacing: 1px;
+      .autor, .fecha{
+          text-align: center;
+      }
+      .autor{
+          letter-spacing: 2px;
+      }
+      .fecha{
+          letter-spacing: 3px;
+          color: grey;
+          margin-top: 3px;
+          margin-bottom: -12px;
+          font-weight: 100;
+      }
+  }
+  hr{
+      border: 0.5px solid var(--oro);
+      width: 80%;
+  }
+}
+.container{
+  a{
+      color: var(--accent);
+  }
+  max-width: 720px;
+  article{
+      img{
+          display: block;
+          margin: 30px auto;
+          max-width: 100%;
+          object-fit: cover;
+      }
+  }
+  .informacion{
+      margin: 80px 0;
+      font-size: 14px;
+      .nombre{
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 20px;
+          letter-spacing: 1px;
+          color: var(--oro);
+      }
+      img{
+          margin: auto;
+          display: block;
+          border-radius: 50%;
+          border: 2px solid var(--oro);
+          // background-color: var(--oro);
+          padding: 5px;
+          height: 80px;
+          width: 80px;
+      }
+      .frase{
+          letter-spacing: 1px;
+      }
+      .descripcion{
+          font-size: 14px;
+      }
+  }
+  .social{
+      .btn{
+          padding: 20px;
+      }
+  }
+  .comentarios{
+      background-color: white;
+  }
+}

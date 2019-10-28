@@ -1,0 +1,23 @@
+:root{
+  --oro: #cca75c;
+  --main: #f2f8ff;
+  --accent: #69ccc8;
+  --blanco: #ffffff;
+  --gris: #aaa;
+}
+body{
+  background-color: var(--main);
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: sans-serif;
+}
+.primario{
+  background-color: var(--oro);
+  border: oro;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 0;
+  letter-spacing: 1.5px;
+}

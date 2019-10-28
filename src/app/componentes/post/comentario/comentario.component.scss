@@ -1,0 +1,42 @@
+.comentario{
+  padding: 20px;
+  .autor{
+      img{
+          border-radius: 50%;
+      }
+      .medallas{
+          text-align: center;
+          color: var(--accent);
+      }
+  }
+  .votaciones{
+      text-align: center;
+      font-size: 20px;
+      .votos{
+          font-weight: 500;
+          color: var(--gris);
+      }
+      .negativo, .positivo{
+          color: var(--gris);
+      }
+      .negativo{
+          // color: red;
+      }
+      .positivo{
+          // color: green;
+      }
+  }
+}
+.herramientas{
+  text-align: center;
+  .responder, .denunciar{
+      padding: 20px;
+  }
+  .denunciar{
+      color: var(--gris);
+  }
+  .responder{
+      color: var(--oro);
+  }
+
+}
