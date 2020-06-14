@@ -7,6 +7,7 @@ import { PostComponent } from './componentes/post/post.component';
 import { HeaderComponent } from './componentes/shared/header/header.component';
 import { ComentarioComponent } from './componentes/post/comentario/comentario.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
+import { ListaPostComponent } from './componentes/shared/lista-post/lista-post.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PortadaComponent } from './componentes/portada/portada.component';
     PostComponent,
     HeaderComponent,
     ComentarioComponent,
-    PortadaComponent
+    PortadaComponent,
+    ListaPostComponent
   ],
   imports: [
     BrowserModule,

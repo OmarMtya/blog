@@ -21,3 +21,81 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 0;
   letter-spacing: 1.5px;
 }
+.card {
+  border: none;
+}
+
+
+.fondo-rosa,
+.fondo-verde,
+.fondo-cafe,
+.fondo-azul,
+.fondo-oscuro,
+.fondo-azulverde {
+  color: white;
+
+  .text-muted {
+    color: rgb(245, 245, 245) !important;
+  }
+
+  .btn {
+    background-color: white !important;
+  }
+}
+
+
+.fondo-azul {
+  background: #61bdff !important;
+  .btn {
+    color: #61bdff;
+    font-weight: bold;
+  }
+}
+
+.fondo-cafe {
+  background: #CBA383;
+  .btn {
+    color: #CBA383;
+    font-weight: bold;
+  }
+}
+
+.fondo-rosa {
+  background: #FF9CA2;
+  .btn {
+    color: #FF9CA2;
+    font-weight: bold;
+  }
+  .text-muted{
+    color: white !important;
+  }
+}
+
+.fondo-oscuro {
+  background: #172432;
+  .btn {
+    color: #172432;
+    font-weight: bold;
+  }
+  .text-muted {
+    color: #6c757d !important;
+  }
+}
+
+.fondo-verde {
+  background: #70ABA7;
+  .btn {
+    color: #70ABA7;
+    font-weight: bold;
+  }
+}
+
+.fondo-azulverde{
+  background: #3CAAC9;
+  .btn{
+    color: #3CAAC9;
+    font-weight: bold;
+  }
+}
+
+
