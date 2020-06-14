@@ -1,0 +1,38 @@
+.card {
+  border: none;
+}
+
+.fondo-azul {
+  background: #61bdff !important;
+}
+
+.fondo-cafe {
+  background: #CBA383;
+}
+
+.fondo-rosa {
+  background: #FF9CA2;
+}
+.fondo-oscuro{
+  background: #172432;
+}
+.fondo-verde{
+  background: #70ABA7;
+}
+.fondo-azulverde{
+  background: #3CAAC9;
+}
+
+
+.fondo-rosa,
+.fondo-verde,
+.fondo-cafe,
+.fondo-azul ,
+.fondo-oscuro,
+.fondo-azulverde{
+  color: white;
+
+  .text-muted {
+    color: rgb(230, 230, 230) !important;
+  }
+}
