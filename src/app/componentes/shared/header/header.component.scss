@@ -2,8 +2,21 @@
   img {
     border-radius: 50%;
     height: 40px;
+    margin-right: 20px;
+    ;
   }
-  .container{
-      justify-content: flex-end;
+
+  // .container{
+  //     justify-content: flex-end;
+  // }
+  .redes {
+    color: white;
+
+    i {
+      margin: 5px;
+    }
+  }
+  #navbarNavAltMarkup {
+    justify-content: flex-end;
   }
 }

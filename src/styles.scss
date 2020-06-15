@@ -7,6 +7,13 @@
 }
 body{
   background-color: var(--main);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px;
+}
+#wrapper{
+  padding-bottom: 72px;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: sans-serif;

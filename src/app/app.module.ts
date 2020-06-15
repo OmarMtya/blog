@@ -8,6 +8,7 @@ import { HeaderComponent } from './componentes/shared/header/header.component';
 import { ComentarioComponent } from './componentes/post/comentario/comentario.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
 import { ListaPostComponent } from './componentes/shared/lista-post/lista-post.component';
+import { FooterComponent } from './componentes/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListaPostComponent } from './componentes/shared/lista-post/lista-post.c
     HeaderComponent,
     ComentarioComponent,
     PortadaComponent,
-    ListaPostComponent
+    ListaPostComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
