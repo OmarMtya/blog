@@ -1,89 +1,84 @@
 <div class="animate__animated animate__backInDown">
-  <header class="container mt-4">
-    <a href="">
-      <small>Categoria</small>
-    </a>
-    <h1 class="m-3">Prueba</h1>
-    <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis facilisis odio, at scelerisque lorem
-      lobortis ut.
-      Sed neque mi, lacinia vel ullamcorper ac, vulputate vitae augue. Proin non elementum nunc. Nulla sed nunc id risus
-      fringilla posuere. Mauris id volutpat sem. Pellentesque vitae sagittis mauris. Mauris ultricies sodales
-      velit</small>
-    <div>
-      <small class="creditos">
+    <header class="container mt-4">
+        <a href="">
+            <small>Pensamientos</small>
+        </a>
+        <h1 class="m-3">Con sueño</h1>
+        <div class="text-center">
+            <small>Escribo de lo que pienso y qué planeo hacer después de varias horas despierto.</small>
+        </div>
+        <div>
+            <small class="creditos">
         <div class="autor">
           Omar Montoya
         </div>
         <div class="fecha">
-          Hace 40 días
+          30/10/2020
         </div>
       </small>
-    </div>
-    <hr>
-  </header>
-  <div class="container">
-  
-    <article>
-      <img src="https://fakeimg.pl/1240x360" alt="">
-      <p>
-  
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis facilisis odio, at scelerisque lorem
-        lobortis ut.
-        Sed neque mi, lacinia vel ullamcorper ac, vulputate vitae augue. Proin non elementum nunc. Nulla sed nunc id risus
-        fringilla posuere. Mauris id volutpat sem. Pellentesque vitae sagittis mauris. Mauris ultricies sodales velit.
-        Interdum
-        et malesuada fames ac ante ipsum primis in faucibus. Cras bibendum aliquam felis. Praesent quam sem, feugiat in
-        efficitur nec, viverra maximus risus. Phasellus mattis, lorem vulputate fermentum sagittis, turpis ex venenatis
-        lectus,
-        nec facilisis urna turpis at erat.
-  
-  
-      </p>
-    </article>
-  
-  
-      <div class="informacion">
-  
-        <div class="row">
-          <div class="col-12 col-md-2">
-            <img src="https://fakeimg.pl/80x80" alt="">
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="row">
-              <div class="col">
-                <span class="nombre">Omar</span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col frase">
-                Lorem ipsum dolor sit amet
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 descripcion">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis facilisis odio, at scelerisque lorem
-            lobortis ut.
-          </div>
         </div>
-  
-      </div>
-    <ng-container *ngIf="mostrarComentarios">
-  
-      <div class="social">
-        <button class="btn btn-block mt-3 primario">
+        <hr>
+    </header>
+    <div class="container">
+
+        <article>
+            <img style="height: 300px;" src="assets/images/sueño.svg" alt="">
+            <p>
+                Escribo esto con más de 30 horas sin dormir, cansado y con un orgullo propio. Después de recapitular en la cantidad de proyectos que he estado, me impresiona lo mucho que he soportado con tanto estrés y sin parar durante tres años.
+            </p>
+            <p>
+                Ha sido un año duro para todos, pero para mí ha sido una gran oportunidad para manejar mis tiempos según mi conveniencia, duermo poco y subo de peso como si estuviera en oferta, pero no termino de aprender cosas nuevas relacionadas con mi trabajo.
+            </p>
+            <p>
+                Como todos los ciclos vacacionales del año aprendo algo relacionado con la tecnología, este no va a ser la excepción; planeo estudiar <b>Inteligencias Artificiales</b> o el manejo de <b>Big Data</b>, algo totalmente fuera de lo que me
+                especializo que es el desarrollo web. Espero que esta bitácora de entradas no lo deje morir y siga públicando cosas. Me encanta ayudar, enseñar y aprender; espero que esta sea una herramienta que siga visitando y terminar el desarrollo
+                del Blog para sentirme orgulloso de otro proyecto más.
+            </p>
+            <p>Escribo esto con un nudo en la espalda, más de 5 horas de desarrollo sin parar y <b>con sueño</b>. Todo esto para decir que a pesar de que sienta que no termino más, me está empezando a gustar. </p>
+        </article>
+
+
+        <div class="informacion">
+
+            <div class="row">
+                <div class="col-12 col-md-2">
+                    <img src="https://pbs.twimg.com/profile_images/1234841215146897408/NSmBc4PL_400x400.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col">
+                            <span class="nombre">Omar</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col frase">
+                            Aficionado al té y al trabajo en la madrugada.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 descripcion">
+                    Desarrollador web full-stack durante más de tres años formado profesionalmente. Con ganas de aprender y enseñar, pero sin gente que quiera ser enseñada. 😢
+                </div>
+            </div>
+
+        </div>
+        <ng-container *ngIf="mostrarComentarios">
+
+            <div class="social">
+                <button class="btn btn-block mt-3 primario">
           <i class="fas fa-comments"></i>
-          10 Comentarios
+          1 Comentario
         </button>
-  
-        <div class="comentarios">
-  
-          <app-comentario></app-comentario>
-  
-        </div>
-  
-      </div>
-    </ng-container>
-    <h4 class="mt-4">Otras entradas</h4>
-    <app-lista-post></app-lista-post>
-  </div>
+
+                <div class="comentarios">
+
+                    <app-comentario></app-comentario>
+
+                </div>
+
+            </div>
+        </ng-container>
+        <!-- <h4 class="mt-4">Otras entradas</h4>
+    <app-lista-post></app-lista-post> -->
+    </div>
 </div>
