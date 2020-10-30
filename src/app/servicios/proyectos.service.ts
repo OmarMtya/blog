@@ -65,7 +65,7 @@ export class ProyectosService {
       titulo: 'Modul Tech',
       descripcion: 'Modul Tech es una idea a partir de las materias de Formación Empresarial y Estrategias de Mercado y Web. Esta es una idea de ventas de módulos de software ya generados anteriormente.',
       descripcionCorta:
-        'Empresa planificada para ventas de módulos desarrollados para manejo de empresas y soluciones empresariales.',
+        'Empresa planificada para ventas de módulos desarrollados para manejo de recursos materiales y humanos.',
       fecha: new Date(),
       imagenes: ['https://i.imgur.com/RanIs73.png'],
       categorias: ['Diseño', 'Ideas'],
