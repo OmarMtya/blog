@@ -40,6 +40,9 @@ header {
     }
     max-width: 720px;
     article {
+        .contenido {
+            white-space: pre-line;
+        }
         img {
             display: block;
             margin: 30px auto;
