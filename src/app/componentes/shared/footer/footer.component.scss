@@ -1,13 +1,17 @@
 .navbar {
-  .redes {
-    color: white;
-
-    i {
-      margin: 10px;
+    .redes {
+        color: white;
+        i {
+            margin: 10px;
+        }
     }
-  }
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    justify-content: center;
+}
+
+a:link,
+a:visited {
+    color: inherit;
 }

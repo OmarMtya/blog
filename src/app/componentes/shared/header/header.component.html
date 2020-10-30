@@ -1,11 +1,8 @@
 <nav>
-    <div class="animate__animated animate__bounceInDown">
+    <div [routerLink]="['/portada']" [routerLinkActive]="'active'" class="animate__animated animate__bounceInDown">
         Acerca de mi
     </div>
-    <div class="animate__animated animate__bounceInDown">
-        Contáctame
-    </div>
-    <div class="animate__animated animate__bounceInDown">
+    <div [routerLink]="['/blog']" [routerLinkActive]="'active'" class="animate__animated animate__bounceInDown">
         Blog
     </div>
 </nav>

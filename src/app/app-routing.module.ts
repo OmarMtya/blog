@@ -5,9 +5,10 @@ import { PostComponent } from './componentes/post/post.component';
 
 
 const routes: Routes = [
-  { path: '', component: PortadaComponent },
-  { path: 'post', component: PostComponent },
-  { path: '**', component: PostComponent },
+  { path: '', redirectTo: '/portada', pathMatch: 'full'},
+  { path: 'portada', component: PortadaComponent },
+  { path: 'blog', component: PostComponent },
+  { path: '**', redirectTo: '/portada' },
 ];
 
 @NgModule({
