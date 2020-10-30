@@ -7,6 +7,10 @@
     --gris: #252734;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--main);
     overflow-x: hidden;
@@ -36,6 +40,7 @@ body {
     color: var(--oro);
     border-bottom: 1px solid var(--oro);
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 #wrapper {

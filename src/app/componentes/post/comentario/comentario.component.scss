@@ -3,6 +3,7 @@
     .autor {
         img {
             border-radius: 50%;
+            max-height: 100px;
         }
         .medallas {
             text-align: center;
@@ -38,3 +39,9 @@
         color: var(--oro);
     }
 }
+
+// @media (max-width: 769px) {
+//     .imagen-comentario {
+//         max-height: 100px;
+//     }
+// }
