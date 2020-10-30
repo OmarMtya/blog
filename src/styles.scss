@@ -1,37 +1,73 @@
-:root{
-  --oro: #cca75c;
-  --main: #f2f8ff;
-  --accent: #69ccc8;
-  --blanco: #ffffff;
-  --gris: #aaa;
-}
-body{
-  background-color: var(--main);
-  overflow-x: hidden;
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 50px;
-}
-#wrapper{
-  padding-bottom: 72px;
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: sans-serif;
-}
-.primario{
-  background-color: var(--oro);
-  border: oro;
-  color: white;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
-  border-radius: 0;
-  letter-spacing: 1.5px;
-}
-.card {
-  border: none;
+:root {
+    --oro: #FFC25C;
+    --main: #252734;
+    --accent: #252734;
+    --blanco: #252734;
+    --gris: #252734;
 }
 
+body {
+    background-color: var(--main);
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'Rubrik-Light';
+}
+
+.boton {
+    border-radius: 50px;
+    padding: 20px 50px;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    cursor: pointer;
+}
+
+.amarillo {
+    background-color: var(--oro);
+    color: white;
+    font-family: 'Rubrik-Bold';
+}
+
+.link {
+    color: var(--oro);
+    border-bottom: 1px solid var(--oro);
+    padding-bottom: 5px;
+}
+
+#wrapper {
+    padding-bottom: 72px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rubrik-Bold';
+}
+
+img {
+    max-width: 100%;
+}
+
+.primario {
+    background-color: var(--oro);
+    border: oro;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 0;
+    letter-spacing: 1.5px;
+}
+
+.card {
+    border: none;
+}
 
 .fondo-rosa,
 .fondo-verde,
@@ -39,70 +75,80 @@ h1,h2,h3,h4,h5,h6{
 .fondo-azul,
 .fondo-oscuro,
 .fondo-azulverde {
-  color: white;
-
-  .text-muted {
-    color: rgb(245, 245, 245) !important;
-  }
-
-  .btn {
-    background-color: white !important;
-  }
+    color: white;
+    .text-muted {
+        color: rgb(245, 245, 245) !important;
+    }
+    .btn {
+        background-color: white !important;
+    }
 }
 
-
 .fondo-azul {
-  background: #61bdff !important;
-  .btn {
-    color: #61bdff;
-    font-weight: bold;
-  }
+    background: #61bdff !important;
+    .btn {
+        color: #61bdff;
+        font-weight: bold;
+    }
 }
 
 .fondo-cafe {
-  background: #CBA383;
-  .btn {
-    color: #CBA383;
-    font-weight: bold;
-  }
+    background: #CBA383;
+    .btn {
+        color: #CBA383;
+        font-weight: bold;
+    }
 }
 
 .fondo-rosa {
-  background: #FF9CA2;
-  .btn {
-    color: #FF9CA2;
-    font-weight: bold;
-  }
-  .text-muted{
-    color: white !important;
-  }
+    background: #FF9CA2;
+    .btn {
+        color: #FF9CA2;
+        font-weight: bold;
+    }
+    .text-muted {
+        color: white !important;
+    }
 }
 
 .fondo-oscuro {
-  background: #172432;
-  .btn {
-    color: #172432;
-    font-weight: bold;
-  }
-  .text-muted {
-    color: #6c757d !important;
-  }
+    background: #172432;
+    .btn {
+        color: #172432;
+        font-weight: bold;
+    }
+    .text-muted {
+        color: #6c757d !important;
+    }
 }
 
 .fondo-verde {
-  background: #70ABA7;
-  .btn {
-    color: #70ABA7;
-    font-weight: bold;
-  }
+    background: #70ABA7;
+    .btn {
+        color: #70ABA7;
+        font-weight: bold;
+    }
 }
 
-.fondo-azulverde{
-  background: #3CAAC9;
-  .btn{
-    color: #3CAAC9;
-    font-weight: bold;
-  }
+.fondo-azulverde {
+    background: #3CAAC9;
+    .btn {
+        color: #3CAAC9;
+        font-weight: bold;
+    }
 }
 
+@font-face {
+    font-family: 'Rubrik-Bold';
+    src: url('assets/fonts/RubrikBold.otf');
+}
 
+@font-face {
+    font-family: 'Rubrik-Light';
+    src: url('assets/fonts/RubrikLight.otf');
+}
+
+@font-face {
+    font-family: 'Rubrik-Semibold';
+    src: url('assets/fonts/RubrikSemiBold.otf');
+}

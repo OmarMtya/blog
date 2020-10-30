@@ -9,6 +9,7 @@ import { ComentarioComponent } from './componentes/post/comentario/comentario.co
 import { PortadaComponent } from './componentes/portada/portada.component';
 import { ListaPostComponent } from './componentes/shared/lista-post/lista-post.component';
 import { FooterComponent } from './componentes/shared/footer/footer.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './componentes/shared/footer/footer.component';
     ComentarioComponent,
     PortadaComponent,
     ListaPostComponent,
-    FooterComponent
+    FooterComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,10 @@
-.navbar {
-  img {
-    border-radius: 50%;
-    height: 40px;
-    margin-right: 20px;
-    ;
-  }
-
-  // .container{
-  //     justify-content: flex-end;
-  // }
-  .redes {
+nav {
     color: white;
-
-    i {
-      margin: 5px;
+    text-align: right;
+    padding-right: 50px;
+    background-color: #333646;
+    div {
+        display: inline-block;
+        margin: 25px;
     }
-  }
-  #navbarNavAltMarkup {
-    justify-content: flex-end;
-  }
 }
