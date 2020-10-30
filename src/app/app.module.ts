@@ -10,6 +10,7 @@ import { PortadaComponent } from './componentes/portada/portada.component';
 import { ListaPostComponent } from './componentes/shared/lista-post/lista-post.component';
 import { FooterComponent } from './componentes/shared/footer/footer.component';
 import { SafePipe } from './pipes/safe.pipe';
+import { DetallesProyectoComponent } from './componentes/portada/detalles-proyecto/detalles-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SafePipe } from './pipes/safe.pipe';
     PortadaComponent,
     ListaPostComponent,
     FooterComponent,
-    SafePipe
+    SafePipe,
+    DetallesProyectoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+<app-detalles-proyecto (click)="deseleccionarProyecto()" [proyecto]="proyectoSeleccionado" *ngIf="proyectoSeleccionado"></app-detalles-proyecto>
+
 <div id="presentacion" class="escaparate">
     <div class="imagen-perfil animate__animated animate__backInDown">
         <img src="https://pbs.twimg.com/profile_images/1234841215146897408/NSmBc4PL_400x400.jpg" alt="">
@@ -54,7 +56,7 @@
             La siguiente es una lista de proyectos actualmente terminados la mayoría se encuentran montados en producción o listos para montar. Si se requiere información extra o más información, no dudar en contactarme.
         </p>
         <div class="card-columns" data-aos="fade-up">
-            <div class="card" *ngFor="let proyecto of proyectos">
+            <div class="card" (click)="proyectoSeleccionadoEvent(proyecto)" *ngFor="let proyecto of proyectos">
                 <ng-container *ngIf="proyecto.imagenes && proyecto.imagenes.length != 0; else elseTemplate">
                     <img class="card-img-top" [src]="proyecto.imagenes[0]" alt="Card image cap">
                 </ng-container>
