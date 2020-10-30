@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "omarmtya"
+    }
+  },
+  "defaultProject": "omarmtya",
+  "cli": {
+    "analytics": "9d63241c-5772-459e-a01f-ee3ec9e879e1"
+  }
 }
