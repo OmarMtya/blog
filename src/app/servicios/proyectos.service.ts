@@ -59,6 +59,7 @@ export class ProyectosService {
           'Engine.js es una librería de manejo y vectorización de figuras en 2D web. Optimizado para ser un motor de videojuegos basados en Canvas HTML5 de Web.',
         fecha: new Date(),
         // imagenes: [''],
+        link: 'http://omarmtya.com/engine',
         video: 'https://www.youtube.com/embed/5sLzi5nNKdE',
         categorias: ['Diseño', 'Programación', 'Web'],
       },
@@ -74,8 +75,7 @@ export class ProyectosService {
       {
         titulo: 'Key Place',
         descripcion: 'Key Place es un restaurante localizado en Ciudad Juárez, Chihuahua, México. Para consumir hace falta sentarse en una mesa interactiva, en la cual se puede jugar, ver presentaciones dadas en el mismo restaurante, pedir para comer, ver el estatus actual de tus pedidos, entre otros. El producto está actualmente en producción y se encuentra en Plaza Bistro de Ciudad Juárez. Fue realizado por el equipo de Key Innovation durante el año de 2018-2019 y actualmente en mantenimiento. Hecha con Angular, Socket.io, Mysql y HammerJs que hace posible el uso de Multi-touch',
-        descripcionCorta:
-          'Mesas interactivas para la comanda de restaurantes. Incluyen videojuegos, lector de revistas, presentador de diapositivas y más.',
+        descripcionCorta: 'Mesas interactivas para la comanda de restaurantes. Incluyen videojuegos, lector de revistas, presentador de diapositivas y más.',
         fecha: new Date(),
         imagenes: ['https://i.imgur.com/ih3sBGe.jpg'],
         categorias: ['Programación', 'Trabajo'],
@@ -135,6 +135,7 @@ export class ProyectosService {
         fecha: new Date(),
         imagenes: ['https://i.imgur.com/QyTVlHC.png', 'https://i.imgur.com/FbaR2Wc.png'],
         categorias: ['Programación', 'Móvil', 'Trabajo'],
+        link: 'https://xchangemx.com/'
       },
     ];
     return proyectos;
