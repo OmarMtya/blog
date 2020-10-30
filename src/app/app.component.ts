@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos/dist/aos.js';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'omarmtya';
+
+  constructor(){
+    AOS.init();
+  }
 }

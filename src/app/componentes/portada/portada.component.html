@@ -1,28 +1,30 @@
-<div id="presentacion">
-    <div class="imagen-perfil">
+<div id="presentacion" class="escaparate">
+    <div class="imagen-perfil animate__animated animate__backInDown">
         <img src="https://pbs.twimg.com/profile_images/1234841215146897408/NSmBc4PL_400x400.jpg" alt="">
     </div>
-    <span class="nombre">
+    <span class="nombre animate__animated animate__fadeIn">
       Soy Omar Montoya 👋
     </span>
-    <h1>
-        Programador y diseñador
-    </h1>
-    <div class="descripcion">
-        Programador Full Stack especializado en el desarrollo de plataformas web. <br> Desarrollador de proyectos modulares a gran escala.
+    <div class="animate__animated animate__fadeInDownBig animate__delay-1s">
+        <h1>
+            Programador y diseñador
+        </h1>
+        <div class="descripcion">
+            Programador Full Stack especializado en el desarrollo de plataformas web. <br> Desarrollador de proyectos modulares a gran escala.
+        </div>
     </div>
-    <div class="boton amarillo">
+    <div class="boton amarillo animate__animated animate__fadeInLeftBig animate__delay-1s">
         Ver Proyectos
     </div>
 </div>
 
-<div id="acerca-mi" class="d-flex justify-content-center align-items-center acaparate">
+<div id="acerca-mi" class="d-flex justify-content-center align-items-center escaparate">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6">
+            <div data-aos="fade-right" class="col-12 col-sm-6">
                 <img src="https://i.imgur.com/FhA27WD.png" alt="" srcset="">
             </div>
-            <div class="col-12 col-sm-6">
+            <div data-aos="fade-left" class="col-12 col-sm-6">
                 <h1 class="mb-5">Acerca de mí</h1>
                 <p>
                     Me considero con habilidades para cualquier etapa de realización. Soy una persona flexible y puedo adaptarme a distintos medios y puestos de trabajo, así como responder de forma adecuada bajo presión.
@@ -45,13 +47,13 @@
     </div>
 </div>
 
-<div class="acaparate" id="proyectos">
+<div class="escaparate" id="proyectos">
     <div class="container">
-        <h1 class="mb-4">Mis proyectos</h1>
-        <p class="mb-5">
+        <h1 class="mb-4" data-aos="flip-up">Mis proyectos</h1>
+        <p data-aos="zoom-in" class="mb-5">
             La siguiente es una lista de proyectos actualmente terminados la mayoría se encuentran montados en producción o listos para montar. Si se requiere información extra o más información, no dudar en contactarme.
         </p>
-        <div class="card-columns">
+        <div class="card-columns" data-aos="fade-up">
             <div class="card" *ngFor="let proyecto of proyectos">
                 <ng-container *ngIf="proyecto.imagenes && proyecto.imagenes.length != 0; else elseTemplate">
                     <img class="card-img-top" [src]="proyecto.imagenes[0]" alt="Card image cap">
