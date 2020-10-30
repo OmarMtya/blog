@@ -51,6 +51,7 @@ export class ProyectosService {
           'https://cdn.oneesports.gg/wp-content/uploads/2020/03/Discord-1024x576.jpg',
         ],
         categorias: ['Diseño', 'Programación'],
+        link: 'https://discord.com/api/oauth2/authorize?client_id=711629663591464990&permissions=8&scope=bot'
       },
       {
         titulo: 'Engine.js',
@@ -79,6 +80,7 @@ export class ProyectosService {
         fecha: new Date(),
         imagenes: ['https://i.imgur.com/ih3sBGe.jpg'],
         categorias: ['Programación', 'Trabajo'],
+        link: 'https://www.facebook.com/keyplacemx/'
       },
       {
         titulo: 'Api Color',
