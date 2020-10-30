@@ -72,7 +72,7 @@ export class ProyectosService {
     },
     {
       titulo: 'Key Place',
-      descripcion: 'Key Place es un restaurante localizado en Ciudad Juárez, Chihuahua, México. Para consumir hace falta sentarse en una mesa interactiva, en la cual se puede jugar, ver presentaciones dadas en el mismo restaurante, pedir para comer, ver el estatus actual de tus pedidos, entre otros. El producto está actualmente en producción y se encuentra en Plaza Bistro de Ciudad Juárez. Fue realizado por el equipo de Key Innovation durante el año de 2018-2019 y actualmente en mantenimiento. Hecha con Angular, Socket.io, Mysql y HammerJs que hace posible el uso de Multitouch',
+      descripcion: 'Key Place es un restaurante localizado en Ciudad Juárez, Chihuahua, México. Para consumir hace falta sentarse en una mesa interactiva, en la cual se puede jugar, ver presentaciones dadas en el mismo restaurante, pedir para comer, ver el estatus actual de tus pedidos, entre otros. El producto está actualmente en producción y se encuentra en Plaza Bistro de Ciudad Juárez. Fue realizado por el equipo de Key Innovation durante el año de 2018-2019 y actualmente en mantenimiento. Hecha con Angular, Socket.io, Mysql y HammerJs que hace posible el uso de Multi-touch',
       descripcionCorta:
         'Mesas interactivas para la comanda de restaurantes. Incluyen videojuegos, lector de revistas, presentador de diapositivas y más.',
       fecha: new Date(),
