@@ -24,6 +24,16 @@
                             <span class="badge badge-primary mr-2" *ngFor="let categoria of proyecto.categorias">{{ categoria }}</span>
                         </div>
                     </div>
+
+                    <div class="row" *ngIf="proyecto.link">
+                        <div class="col">
+                            Enlace:
+                            <a [href]="proyecto.link">
+                              {{proyecto.link}}
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
