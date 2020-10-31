@@ -23,19 +23,21 @@
 <div id="acerca-mi" class="d-flex justify-content-center align-items-center escaparate">
     <div class="container">
         <div class="row">
-            <div data-aos="fade-right" class="col-12 col-sm-6">
+            <div class="col-12 col-md-6 text-center">
                 <img src="https://i.imgur.com/FhA27WD.png" alt="" srcset="">
             </div>
-            <div data-aos="fade-left" class="col-12 col-sm-6">
-                <h1 class="mb-5">Acerca de mí</h1>
-                <p>
-                    Desarrollador de software con más de 3 años de experiencia profesional, con habilidades de comunicación, control de tiempos, trabajo bajo presión y atención/soporte a cliente final.
-                </p>
-                <p>
-                    Me considero una persona proactiva, con un amplio criterio para solución de problemas de acuerdo a mis habilidades y experiencia; al igual lograr y cumplir las estrategias, planes y objetivos dentro de una organización. Con un alto grado de responsabilidad,
-                    confianza y disponibilidad de pertenecer a nuevos proyectos.
-                </p>
-                <div class="text-right mt-5">
+            <div class="col-12 col-md-6">
+                <h1 class="mb-5 wow animate__animated animate__backInDown">Acerca de mí</h1>
+                <div class="wow animate__animated animate__backInDown">
+                    <p>
+                        Desarrollador de software con más de 3 años de experiencia profesional, con habilidades de comunicación, control de tiempos, trabajo bajo presión y atención/soporte a cliente final.
+                    </p>
+                    <p>
+                        Me considero una persona proactiva, con un amplio criterio para solución de problemas de acuerdo a mis habilidades y experiencia; al igual lograr y cumplir las estrategias, planes y objetivos dentro de una organización. Con un alto grado de responsabilidad,
+                        confianza y disponibilidad de pertenecer a nuevos proyectos.
+                    </p>
+                </div>
+                <div class="text-right mt-5 wow animate__animated animate__fadeInRightBig">
                     <span class="link" (click)="scrollTo('proyectos')">
                       Ver mis proyectos
                     </span>
@@ -47,15 +49,17 @@
 
 <div class="escaparate pt-5" id="proyectos">
     <div class="container">
-        <h1 class="mb-4" data-aos="flip-up">Mis proyectos</h1>
-        <p data-aos="zoom-in" class="mb-5">
-            La siguiente es una lista de proyectos actualmente terminados, la mayoría se encuentran montados en producción o listos para montar. Si se requiere información extra o más información, no dudar en contactarme.
-        </p>
-        <p data-aos="zoom-in" class="mb-5">
-            Conforme vayan pasando los días, agregaré más pruebas del desarrollo y los enlaces a producción.
-        </p>
-        <div class="card-columns" data-aos="fade-up">
-            <div class="card" (click)="proyectoSeleccionadoEvent(proyecto)" *ngFor="let proyecto of proyectos">
+        <div class="wow animate__animated animate__backInDown">
+            <h1 class="mb-4">Mis proyectos</h1>
+            <p class="mb-5">
+                La siguiente es una lista de proyectos actualmente terminados, la mayoría se encuentran montados en producción o listos para montar. Si se requiere información extra o más información, no dudar en contactarme.
+            </p>
+            <p class="mb-5">
+                Conforme vayan pasando los días, agregaré más pruebas del desarrollo y los enlaces a producción.
+            </p>
+        </div>
+        <div class="card-columns">
+            <div class="card wow animate__animated animate__backInDown" (click)="proyectoSeleccionadoEvent(proyecto)" *ngFor="let proyecto of proyectos">
                 <ng-container *ngIf="proyecto.imagenes && proyecto.imagenes.length != 0; else elseTemplate">
                     <img class="card-img-top" [src]="proyecto.imagenes[0]" alt="Card image cap">
                 </ng-container>

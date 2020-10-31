@@ -11,6 +11,8 @@ import { ListaPostComponent } from './componentes/shared/lista-post/lista-post.c
 import { FooterComponent } from './componentes/shared/footer/footer.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { DetallesProyectoComponent } from './componentes/portada/detalles-proyecto/detalles-proyecto.component';
+import { NgwWowModule } from 'ngx-wow';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { DetallesProyectoComponent } from './componentes/portada/detalles-proyec
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

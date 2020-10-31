@@ -29,10 +29,10 @@
                         ],
                         "styles": [
                             "src/styles.scss",
-                            "node_modules/aos/dist/aos.css"
+                            "node_modules/animate.css/animate.css"
                         ],
                         "scripts": [
-                            "node_modules/aos/dist/aos.js"
+                            "node_modules/wowjs/dist/wow.js"
                         ]
                     },
                     "configurations": {

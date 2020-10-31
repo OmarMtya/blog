@@ -1,5 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgwWowService } from 'ngx-wow';
 import { Proyecto } from 'src/app/models/proyectos.model';
 import { ProyectosService } from '../../servicios/proyectos.service';
 @Component({
