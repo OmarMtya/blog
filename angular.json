@@ -29,10 +29,12 @@
                         ],
                         "styles": [
                             "src/styles.scss",
-                            "node_modules/animate.css/animate.css"
+                            "node_modules/animate.css/animate.css",
+                            "node_modules/cookieconsent/build/cookieconsent.min.css"
                         ],
                         "scripts": [
-                            "node_modules/wowjs/dist/wow.js"
+                            "node_modules/wowjs/dist/wow.js",
+                            "node_modules/cookieconsent/build/cookieconsent.min.js"
                         ]
                     },
                     "configurations": {
