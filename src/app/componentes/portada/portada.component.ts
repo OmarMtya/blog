@@ -20,7 +20,6 @@ export class PortadaComponent implements OnInit, OnDestroy {
   suscripcion: Subscription[] = [];
 
   constructor(
-    private proyectosService: PortadaService,
     private viewportScroller: ViewportScroller,
     private store: Store<AppState>) {
       const portada$ = this.store.select('portada').subscribe((data) => {

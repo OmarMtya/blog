@@ -1,6 +1,6 @@
 <div *ngIf="post" class="animate__animated animate__backInDown">
     <header class="container mt-4">
-        <a href="">
+        <a href="" *ngIf="post.categoriapost">
             <small>{{ post.categoriapost.contenido }}</small>
         </a>
         <h1 class="m-3">{{post.titulo}}</h1>
@@ -29,32 +29,31 @@
             </p>
         </article>
 
+        <ng-container *ngIf="entradaIndividual">
+            <div class="informacion">
 
-        <div class="informacion">
-
-            <div class="row">
-                <div class="col-12 col-md-2">
-                    <img src="https://pbs.twimg.com/profile_images/1234841215146897408/NSmBc4PL_400x400.jpg" alt="">
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col">
-                            <span class="nombre">Omar</span>
+                <div class="row">
+                    <div class="col-12 col-md-2">
+                        <img src="https://pbs.twimg.com/profile_images/1234841215146897408/NSmBc4PL_400x400.jpg" alt="">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <span class="nombre">Omar</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col frase">
+                                Aficionado al té, relojes y al trabajo en la madrugada.
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col frase">
-                            Aficionado al té, relojes y al trabajo en la madrugada.
-                        </div>
+                    <div class="col-12 col-md-6 descripcion">
+                        Desarrollador web full-stack durante más de tres años formado profesionalmente. Con ganas de aprender y enseñar, pero sin gente que quiera ser enseñada. 😢
                     </div>
                 </div>
-                <div class="col-12 col-md-6 descripcion">
-                    Desarrollador web full-stack durante más de tres años formado profesionalmente. Con ganas de aprender y enseñar, pero sin gente que quiera ser enseñada. 😢
-                </div>
+
             </div>
-
-        </div>
-        <ng-container *ngIf="mostrarComentarios">
 
             <div class="social">
                 <button class="btn btn-block mt-3 primario">
@@ -69,8 +68,9 @@
                 </div>
 
             </div>
-        </ng-container>
-        <!-- <h4 class="mt-4">Otras entradas</h4>
+            <!-- <h4 class="mt-4">Otras entradas</h4>
     <app-lista-post></app-lista-post> -->
+        </ng-container>
+        <hr>
     </div>
 </div>
