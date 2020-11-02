@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from 'src/app/models/posts.model';
+import { PostsService } from '../../servicios/posts.service';
 
 @Component({
   selector: "app-post",
@@ -7,8 +9,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
   @Input() mostrarComentarios = true;
+  @Input() post: Post;
 
-  constructor() {}
+  constructor(private postsService: PostsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 }

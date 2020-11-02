@@ -1,19 +1,19 @@
-<div class="animate__animated animate__backInDown">
+<div *ngIf="post" class="animate__animated animate__backInDown">
     <header class="container mt-4">
         <a href="">
-            <small>Pensamientos</small>
+            <small>{{ post.categoriapost.contenido }}</small>
         </a>
-        <h1 class="m-3">Con sueño</h1>
+        <h1 class="m-3">{{post.titulo}}</h1>
         <div class="text-center">
-            <small>Escribo de lo que pienso y qué planeo hacer después de varias horas despierto.</small>
+            <small>{{ post.descripcion }}</small>
         </div>
         <div>
             <small class="creditos">
         <div class="autor">
-          Omar Montoya
+          {{ post.autor.nombre }}
         </div>
         <div class="fecha">
-          30/10/2020
+          {{ post.created_at | date }}
         </div>
       </small>
         </div>
@@ -22,18 +22,11 @@
     <div class="container">
 
         <article>
-            <img style="height: 300px;" src="assets/images/sueño.svg" alt="">
-            <p>
-                Escribo esto con más de 30 horas sin dormir, cansado y con un orgullo propio. Después de recapitular en la cantidad de proyectos que he estado, me impresiona lo mucho que he soportado con tanto estrés y sin parar durante tres años.
+            <p class="contenido">
+                <markdown>
+                    {{ post.contenido }}
+                </markdown>
             </p>
-            <p>
-                Ha sido un año duro para todos, pero para mí ha sido una gran oportunidad para manejar mis tiempos según mi conveniencia, duermo poco y subo de peso como si estuviera en oferta, pero no termino de aprender cosas nuevas relacionadas con mi trabajo.
-            </p>
-            <p>
-                Espero que esta bitácora de entradas no lo deje morir y siga públicando cosas. Me encanta ayudar, enseñar y aprender; espero que esta sea una herramienta la cual siga visitando y conseguir terminar el desarrollo del Blog para sentirme orgulloso de otro
-                proyecto más.
-            </p>
-            <p>Escribo esto con un nudo en la espalda, más de 5 horas de desarrollo sin parar y <b>con sueño</b>. Todo esto para decir que a pesar de que sienta que no termino más, me está empezando a gustar. </p>
         </article>
 
 

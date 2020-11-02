@@ -14,6 +14,9 @@ import { DetallesProyectoComponent } from './componentes/portada/detalles-proyec
 import { NgwWowModule } from 'ngx-wow';
 import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from "@angular/common/http";
+import { EntradasComponent } from "./componentes/entradas/entradas.component";
+import { MarkdownModule } from "ngx-markdown";
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -46,6 +49,7 @@ const cookieConfig: NgcCookieConsentConfig = {
   type: "opt-out",
 };
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,12 +61,15 @@ const cookieConfig: NgcCookieConsentConfig = {
     FooterComponent,
     SafePipe,
     DetallesProyectoComponent,
+    EntradasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgwWowModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
+    HttpClientModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
