@@ -1,24 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.reducer';
 import { Post } from '../../models/posts.model';
-import { PostsService } from '../../servicios/posts.service';
+import { BlogService } from '../../servicios/posts.service';
+import { getPosts } from '../../store/actions/blog.actions';
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: "app-entradas",
-  templateUrl: "./entradas.component.html",
-  styleUrls: ["./entradas.component.scss"],
+  selector: 'app-entradas',
+  templateUrl: './entradas.component.html',
+  styleUrls: ['./entradas.component.scss'],
 })
-export class EntradasComponent implements OnInit {
+export class EntradasComponent implements OnInit, OnDestroy {
   posts: Post[] = [];
+  suscripciones: Subscription[] = [];
+  cargando = true;
 
-  constructor(private postsService: PostsService) {}
+  constructor(
+    private store: Store<AppState>
+  ) {
+    const blogSuscription$ = this.store.select('blog').subscribe((data) => {
+      this.cargando = data.cargando;
+      this.posts = data.entradas;
+    });
+    this.suscripciones.push(blogSuscription$);
+  }
+  ngOnDestroy(): void {
+    this.suscripciones.forEach((sub) => {
+      sub.unsubscribe();
+    });
+  }
 
   ngOnInit(): void {
-    this.postsService
-      .getPosts()
-      .toPromise()
-      .then((data: Post[]) => {
-        this.posts = data;
-        console.log(data);
-      });
+    this.store.dispatch(getPosts());
   }
 }

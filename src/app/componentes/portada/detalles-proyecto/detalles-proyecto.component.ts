@@ -22,6 +22,7 @@ export class DetallesProyectoComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    console.log(this.proyecto);
   }
 
   getColor() {

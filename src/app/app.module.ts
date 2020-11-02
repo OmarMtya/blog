@@ -17,6 +17,12 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from "@angular/common/http";
 import { EntradasComponent } from "./componentes/entradas/entradas.component";
 import { MarkdownModule } from "ngx-markdown";
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { appReducers } from './store/app.reducer';
+import { EffectsArray } from './store/effects/index';
+import { LoadingComponent } from './componentes/shared/loading/loading.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -61,7 +67,8 @@ const cookieConfig: NgcCookieConsentConfig = {
     FooterComponent,
     SafePipe,
     DetallesProyectoComponent,
-    EntradasComponent
+    EntradasComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +76,13 @@ const cookieConfig: NgcCookieConsentConfig = {
     NgwWowModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
     HttpClientModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    StoreModule.forRoot(appReducers),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+    }),
+    EffectsModule.forRoot(EffectsArray)
   ],
   providers: [],
   bootstrap: [AppComponent],
