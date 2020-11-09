@@ -2,5 +2,11 @@
     <app-loading></app-loading>
 </div>
 <ng-template #elseTemplate>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/portada']">Inicio</a></li>
+            <li class="breadcrumb-item">Blog</li>
+        </ol>
+    </nav>
     <app-post *ngFor="let post of posts" [post]="post"></app-post>
 </ng-template>
