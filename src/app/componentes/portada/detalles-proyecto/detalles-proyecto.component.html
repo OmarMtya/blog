@@ -1,13 +1,6 @@
 <div class="detalles">
     <div class="detalle-container animate__animated animate__bounceInUp">
         <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a [routerLink]="['/portada']">Inicio</a></li>
-                    <li class="breadcrumb-item"><a (click)="scrollToProyectos()" [routerLink]="['/portada']">Proyectos</a></li>
-                    <li class="breadcrumb-item">{{ proyecto.titulo }}</li>
-                </ol>
-            </nav>
             <h1 class="mb-4 mt-4">{{ proyecto.titulo }}</h1>
             <div class="row">
                 <div class="col-12 col-sm-6 text-center">
