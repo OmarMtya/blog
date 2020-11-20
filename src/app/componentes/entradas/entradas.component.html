@@ -2,5 +2,17 @@
     <app-loading></app-loading>
 </div>
 <ng-template #elseTemplate>
-    <app-post *ngFor="let post of posts" [post]="post"></app-post>
+    <ng-container *ngIf="posts.length == 0; else elsePosts">
+        <div class="animate__animated animate__backInUp">
+            <div class="text-center mt-5">
+                Sin entradas disponibles. 🙁
+            </div>
+            <div class="text-center mt-2">
+                <a routerLink="['portada']"> Volver </a>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #elsePosts>
+        <app-post *ngFor="let post of posts" [post]="post"></app-post>
+    </ng-template>
 </ng-template>
