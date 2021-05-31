@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   url: 'localhost',
-  servidor: 'http://blog.omarmtya.com'
+  servidor: 'https://blog.omarmtya.com'
 };
 
 /*
