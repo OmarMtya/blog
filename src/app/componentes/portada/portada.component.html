@@ -1,83 +1,93 @@
-<app-detalles-proyecto (click)="deseleccionarProyecto()" [proyecto]="proyectoSeleccionado" *ngIf="proyectoSeleccionado"></app-detalles-proyecto>
+<app-detalles-proyecto (click)="deseleccionarProyecto()" [proyecto]="proyectoSeleccionado" *ngIf="proyectoSeleccionado">
+</app-detalles-proyecto>
 
 <div id="presentacion" class="escaparate">
-    <div class="imagen-perfil animate__animated animate__backInDown animate__delay-1s">
-        <img src="https://pbs.twimg.com/profile_images/1234841215146897408/NSmBc4PL_400x400.jpg" alt="">
+  <div class="imagen-perfil animate__animated animate__backInDown animate__delay-1s">
+    <img src="https://pbs.twimg.com/profile_images/1234841215146897408/NSmBc4PL_400x400.jpg" alt="">
+  </div>
+  <span class="nombre animate__animated animate__fadeIn">
+    Soy Omar Montoya 👋
+  </span>
+  <div class="animate__animated animate__fadeInDownBig">
+    <h1>
+      Programador y diseñador digital
+    </h1>
+    <div class="descripcion animate__animated">
+      Programador Full Stack especializado en el desarrollo de plataformas web. <br> Desarrollador de proyectos
+      modulares a gran escala.
     </div>
-    <span class="nombre animate__animated animate__fadeIn">
-      Soy Omar Montoya 👋
-    </span>
-    <div class="animate__animated animate__fadeInDownBig">
-        <h1>
-            Programador y diseñador digital
-        </h1>
-        <div class="descripcion animate__animated">
-            Programador Full Stack especializado en el desarrollo de plataformas web. <br> Desarrollador de proyectos modulares a gran escala.
-        </div>
-    </div>
-    <div (click)="scrollTo('acerca-mi')" class="boton amarillo animate__animated animate__fadeInLeftBig animate__delay-1s">
-        Acerca de mí
-    </div>
+  </div>
+  <div (click)="scrollTo('acerca-mi')"
+    class="boton amarillo animate__animated animate__fadeInLeftBig animate__delay-1s">
+    Acerca de mí
+  </div>
 </div>
 
 <div id="acerca-mi" class="d-flex justify-content-center align-items-center escaparate">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 text-center">
-                <img src="https://i.imgur.com/FhA27WD.png" alt="" srcset="">
-            </div>
-            <div class="col-12 col-md-6">
-                <h1 class="mb-5 wow animate__animated animate__backInDown">Acerca de mí</h1>
-                <div class="wow animate__animated animate__backInDown">
-                    <p>
-                        Desarrollador de software con experiencia profesional desde 2017, habilidades de comunicación, control de tiempos, trabajo bajo presión y atención/soporte a cliente final.
-                    </p>
-                    <p>
-                        Me considero una persona proactiva, con un amplio criterio para solución de problemas de acuerdo a mis habilidades y experiencia; al igual lograr y cumplir las estrategias, planes y objetivos dentro de una organización. Con un alto grado de responsabilidad,
-                        confianza y disponibilidad de pertenecer a nuevos proyectos.
-                    </p>
-                </div>
-                <div class="text-right mt-5 wow animate__animated animate__fadeInRightBig">
-                    <span class="link" (click)="scrollTo('proyectos')">
-                      Ver mis proyectos
-                    </span>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 text-center">
+        <img src="https://i.imgur.com/FhA27WD.png" alt="" srcset="">
+      </div>
+      <div class="col-12 col-md-6">
+        <h1 class="mb-5 wow animate__animated animate__backInDown">Acerca de mí</h1>
+        <div class="wow animate__animated animate__backInDown">
+          <p>
+            Desarrollador de software con experiencia profesional desde 2017, habilidades de comunicación, control de
+            tiempos, trabajo bajo presión y atención/soporte a cliente final.
+          </p>
+          <p>
+            Me considero una persona proactiva, con un amplio criterio para solución de problemas de acuerdo a mis
+            habilidades y experiencia; al igual lograr y cumplir las estrategias, planes y objetivos dentro de una
+            organización. Con un alto grado de responsabilidad,
+            confianza y disponibilidad de pertenecer a nuevos proyectos.
+          </p>
         </div>
+        <div class="text-right mt-5 wow animate__animated animate__fadeInRightBig">
+          <span class="link" (click)="scrollTo('proyectos')">
+            Ver mis proyectos
+          </span>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <ng-container *ngIf="cargando; else proyectosTemplate">
-    <div class="escaparate pt-5 d-flex justify-content-center align-items-center">
-        <app-loading></app-loading>
-    </div>
+  <div class="escaparate pt-5 d-flex justify-content-center align-items-center">
+    <app-loading></app-loading>
+  </div>
 </ng-container>
 <ng-template #proyectosTemplate>
-    <div class="escaparate pt-5" id="proyectos">
-        <div class="container">
-            <div class="wow animate__animated animate__backInDown">
-                <h1 class="mb-4">Mis proyectos</h1>
-                <p class="mb-5">
-                    La siguiente es una lista de proyectos actualmente terminados, la mayoría se encuentran montados en producción o listos para montar. Si se requiere información extra o más información, no dudar en contactarme.
-                </p>
-                <p class="mb-5">
-                    Conforme vayan pasando los días, agregaré más pruebas del desarrollo y los enlaces a producción.
-                </p>
-            </div>
-            <div class="card-columns">
-                <div class="card wow animate__animated animate__backInDown" (click)="proyectoSeleccionadoEvent(proyecto)" *ngFor="let proyecto of proyectos">
-                    <ng-container *ngIf="proyecto.imagenesproyectos && proyecto.imagenesproyectos.length != 0; else elseTemplate">
-                        <img class="card-img-top" [src]="proyecto.imagenesproyectos[0].url" alt="Card image cap">
-                    </ng-container>
-                    <ng-template #elseTemplate>
-                        <iframe width="100%" height="200" [src]="proyecto.video | safe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </ng-template>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ proyecto.titulo }}</h5>
-                        <p class="card-text descripcion">{{ proyecto.descripcionCorta }}</p>
-                    </div>
-                </div>
-            </div>
+  <div class="escaparate pt-5" id="proyectos">
+    <div class="container">
+      <div class="wow animate__animated animate__backInDown">
+        <h1 class="mb-4">Mis proyectos</h1>
+        <p class="mb-5">
+          La siguiente es una lista de proyectos actualmente terminados, la mayoría se encuentran montados en producción
+          o listos para montar. Si se requiere información extra o más información, no dudar en contactarme.
+        </p>
+        <p class="mb-5">
+          Conforme vayan pasando los días, agregaré más pruebas del desarrollo y los enlaces a producción.
+        </p>
+      </div>
+      <div class="card-columns">
+        <div class="card wow animate__animated animate__backInDown" (click)="proyectoSeleccionadoEvent(proyecto)"
+          *ngFor="let proyecto of proyectos">
+          <ng-container *ngIf="proyecto.imagenesproyectos && proyecto.imagenesproyectos.length != 0; else elseTemplate">
+            <img class="card-img-top" [src]="getImagen(proyecto.imagenesproyectos[0].url)" alt="Card image cap">
+          </ng-container>
+          <ng-template #elseTemplate>
+            <iframe width="100%" height="200" [src]="proyecto.video | safe" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </ng-template>
+          <div class="card-body">
+            <h5 class="card-title">{{ proyecto.titulo }}</h5>
+            <p class="card-text descripcion">{{ proyecto.descripcionCorta }}</p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </ng-template>

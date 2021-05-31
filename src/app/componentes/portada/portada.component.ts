@@ -8,6 +8,7 @@ import { AppState } from 'src/app/store/app.reducer';
 import { PortadaService } from '../../servicios/portada.service';
 import { getProyectos } from '../../store/actions/portada.actions';
 import { Subscription } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-portada',
   templateUrl: './portada.component.html',
@@ -22,11 +23,11 @@ export class PortadaComponent implements OnInit, OnDestroy {
   constructor(
     private viewportScroller: ViewportScroller,
     private store: Store<AppState>) {
-      const portada$ = this.store.select('portada').subscribe((data) => {
-        this.cargando = data.cargando;
-        this.proyectos = data.proyectos;
-      });
-      this.suscripcion.push(portada$);
+    const portada$ = this.store.select('portada').subscribe((data) => {
+      this.cargando = data.cargando;
+      this.proyectos = data.proyectos;
+    });
+    this.suscripcion.push(portada$);
   }
 
   ngOnDestroy(): void {
@@ -46,6 +47,10 @@ export class PortadaComponent implements OnInit, OnDestroy {
 
   scrollTo(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+  getImagen(url: string) {
+    return `${environment.servidor}${url}`;
   }
 
   deseleccionarProyecto() {
