@@ -12,7 +12,6 @@ import { FooterComponent } from './componentes/shared/footer/footer.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { DetallesProyectoComponent } from './componentes/portada/detalles-proyecto/detalles-proyecto.component';
 import { NgwWowModule } from 'ngx-wow';
-import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from "@angular/common/http";
 import { EntradasComponent } from "./componentes/entradas/entradas.component";
@@ -24,36 +23,6 @@ import { appReducers } from './store/app.reducer';
 import { EffectsArray } from './store/effects/index';
 import { LoadingComponent } from './componentes/shared/loading/loading.component';
 
-const cookieConfig: NgcCookieConsentConfig = {
-  cookie: {
-    domain: environment.url, // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
-  },
-  palette: {
-    popup: {
-      background: "#000000",
-      text: "#ffffff",
-      link: "#ffffff",
-    },
-    button: {
-      background: "#ffc25c",
-      text: "#000000",
-      border: "transparent",
-    },
-  },
-  content: {
-    message: "Utilizamos cookies propias y de terceros para mejorar nuestros servicios. Si continúa navegando, consideramos que acepta el uso de ellas.",
-    dismiss: "Lo entiendo",
-    deny: "Declinar",
-    link: "Conocer más",
-    href: "https://cookiesandyou.com",
-    policy: "Cookie Policy",
-    header: "Cookies siendo utilizadas en el sitio",
-    allow: "Aceptar cookies"
-  },
-  position: "bottom-right",
-  theme: "classic",
-  type: "opt-out",
-};
 
 
 @NgModule({
@@ -74,7 +43,6 @@ const cookieConfig: NgcCookieConsentConfig = {
     BrowserModule,
     AppRoutingModule,
     NgwWowModule,
-    NgcCookieConsentModule.forRoot(cookieConfig),
     HttpClientModule,
     MarkdownModule.forRoot(),
     StoreModule.forRoot(appReducers),
@@ -87,4 +55,4 @@ const cookieConfig: NgcCookieConsentConfig = {
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
