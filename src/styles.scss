@@ -36,7 +36,7 @@ body {
 
 .amarillo {
     background-color: var(--oro);
-    color: white;
+    color: var(--oscuro);
     font-family: 'Rubrik-Bold';
 }
 
@@ -150,6 +150,10 @@ img {
         color: #3CAAC9;
         font-weight: bold;
     }
+}
+
+.button{
+    color: var(--oscuro) !important;
 }
 
 @font-face {

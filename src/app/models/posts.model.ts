@@ -7,7 +7,7 @@ export class Post {
   contenido: string;
   comentarios: Comentario[];
   autor: {nombre: string, id: number};
-  created_at: Date;
+  createdAt: Date;
 }
 
 class CategoriaPost {

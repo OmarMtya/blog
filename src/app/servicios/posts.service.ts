@@ -10,6 +10,6 @@ export class BlogService {
   constructor(private http: HttpClient) { }
 
   getPosts(){
-    return this.http.get(`${environment.servidor}/posts`);
+    return this.http.get(`${environment.servidor}/posts?_sort=createdAt:DESC`);
   }
 }
