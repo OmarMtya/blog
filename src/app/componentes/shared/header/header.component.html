@@ -1,6 +1,9 @@
 <nav>
-    <div [routerLink]="['/portada']" [routerLinkActive]="'active'" class="animate__animated animate__bounceInDown">
-        Acerca de mí
+    <div [routerLink]="['/']" [routerLinkActiveOptions]= "{exact: true}" [routerLinkActive]="'active'" class="animate__animated animate__bounceInDown">
+        Inicio
+    </div>
+    <div [routerLink]="['/cv']" [routerLinkActive]="'active'" class="animate__animated animate__bounceInDown">
+        CV
     </div>
     <div [routerLink]="['/blog']" [routerLinkActive]="'active'" class="animate__animated animate__bounceInDown">
         Blog

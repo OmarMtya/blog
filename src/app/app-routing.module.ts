@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostComponent } from './componentes/post/post.component';
 import { EntradasComponent } from './componentes/entradas/entradas.component';
+import { CurriculumComponent } from './componentes/curriculum/curriculum.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/portada', pathMatch: 'full'},
-  { path: 'portada', component: PortadaComponent },
+  { path: '', component: PortadaComponent },
   { path: 'blog', component: EntradasComponent },
-  { path: '**', redirectTo: '/portada' },
+  { path: 'cv', component: CurriculumComponent },
+  { path: '**', redirectTo: '/' },
 ];
 
 @NgModule({

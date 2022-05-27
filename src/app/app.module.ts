@@ -22,6 +22,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { appReducers } from './store/app.reducer';
 import { EffectsArray } from './store/effects/index';
 import { LoadingComponent } from './componentes/shared/loading/loading.component';
+import { CurriculumComponent } from './componentes/curriculum/curriculum.component';
 
 
 
@@ -38,6 +39,7 @@ import { LoadingComponent } from './componentes/shared/loading/loading.component
     DetallesProyectoComponent,
     EntradasComponent,
     LoadingComponent,
+    CurriculumComponent,
   ],
   imports: [
     BrowserModule,
