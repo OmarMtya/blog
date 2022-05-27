@@ -11,7 +11,6 @@ import { ListaPostComponent } from './componentes/shared/lista-post/lista-post.c
 import { FooterComponent } from './componentes/shared/footer/footer.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { DetallesProyectoComponent } from './componentes/portada/detalles-proyecto/detalles-proyecto.component';
-import { NgwWowModule } from 'ngx-wow';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from "@angular/common/http";
 import { EntradasComponent } from "./componentes/entradas/entradas.component";
@@ -44,7 +43,6 @@ import { CurriculumComponent } from './componentes/curriculum/curriculum.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgwWowModule,
     HttpClientModule,
     MarkdownModule.forRoot(),
     StoreModule.forRoot(appReducers),

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { NgwWowService } from 'ngx-wow';
-import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,12 +9,9 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent {
   title = "omarmtya";
-  private wowSubscription: Subscription;
   constructor(
     private router: Router,
-    private wowService: NgwWowService,
   ) {
-    this.wowService.init();
     // subscribe to cookieconsent observables to react to main events
   }
 }
