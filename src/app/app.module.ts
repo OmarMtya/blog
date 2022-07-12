@@ -14,7 +14,6 @@ import { DetallesProyectoComponent } from './componentes/portada/detalles-proyec
 import { environment } from '../environments/environment';
 import { HttpClientModule } from "@angular/common/http";
 import { EntradasComponent } from "./componentes/entradas/entradas.component";
-import { MarkdownModule } from "ngx-markdown";
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
@@ -48,7 +47,6 @@ import { SocketComponent } from './servicios/socket/socket.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MarkdownModule.forRoot(),
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
