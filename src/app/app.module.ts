@@ -22,6 +22,7 @@ import { appReducers } from './store/app.reducer';
 import { EffectsArray } from './store/effects/index';
 import { LoadingComponent } from './componentes/shared/loading/loading.component';
 import { CurriculumComponent } from './componentes/curriculum/curriculum.component';
+import { VivoComponent } from './componentes/vivo/vivo.component';
 
 
 
@@ -39,6 +40,7 @@ import { CurriculumComponent } from './componentes/curriculum/curriculum.compone
     EntradasComponent,
     LoadingComponent,
     CurriculumComponent,
+    VivoComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { CurriculumComponent } from './componentes/curriculum/curriculum.compone
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
-    EffectsModule.forRoot(EffectsArray)
+    EffectsModule.forRoot(EffectsArray),
+    // VimeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
