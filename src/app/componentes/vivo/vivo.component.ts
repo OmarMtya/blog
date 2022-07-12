@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import flvjs from 'flv.js';
+import { take } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-vivo',
@@ -8,20 +11,22 @@ import flvjs from 'flv.js';
 })
 export class VivoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    if (flvjs.isSupported()) {
-      var videoElement: HTMLMediaElement = <HTMLMediaElement>document.getElementById('videoElement');
-      var flvPlayer = flvjs.createPlayer({
-        type: 'flv',
-        url: 'https://9cea-2806-2f0-3340-57e1-9cd3-7cc3-245b-ab1b.ngrok.io/live/stream.flv?sign=1910072595-5ac3ddbcb62facf35314033c8bfc8198',
-      });
-      flvPlayer.attachMediaElement(videoElement);
-      // videoElement.muted = true;
-      flvPlayer.load();
-      flvPlayer.play();
-    }
+    this.http.get(environment.servidor + '/stream').pipe(take(1)).subscribe((x) => {
+      if (flvjs.isSupported()) {
+        var videoElement: HTMLMediaElement = <HTMLMediaElement>document.getElementById('videoElement');
+        var flvPlayer = flvjs.createPlayer({
+          type: 'flv',
+          url: x['server']+'/live/stream.flv?sign=1910072595-5ac3ddbcb62facf35314033c8bfc8198',
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        // videoElement.muted = true;
+        flvPlayer.load();
+        flvPlayer.play();
+      }
+    })
   }
 
 }

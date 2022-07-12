@@ -23,6 +23,7 @@ import { LoadingComponent } from './componentes/shared/loading/loading.component
 import { CurriculumComponent } from './componentes/curriculum/curriculum.component';
 import { VivoComponent } from './componentes/vivo/vivo.component';
 import { SocketComponent } from './servicios/socket/socket.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 
 
@@ -53,6 +54,7 @@ import { SocketComponent } from './servicios/socket/socket.component';
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
     EffectsModule.forRoot(EffectsArray),
+    MarkdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

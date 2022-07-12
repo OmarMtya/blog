@@ -33,7 +33,7 @@
                         ],
                         "scripts": [
                             "node_modules/cookieconsent/build/cookieconsent.min.js",
-                            "node_modules/marked/lib/marked.js"
+                            "node_modules/marked/marked.min.js"
                         ],
                         "vendorChunk": true,
                         "extractLicenses": false,
@@ -122,7 +122,6 @@
             }
         }
     },
-    "defaultProject": "omarmtya",
     "cli": {
         "analytics": "9d63241c-5772-459e-a01f-ee3ec9e879e1"
     }
