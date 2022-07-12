@@ -23,6 +23,7 @@ import { EffectsArray } from './store/effects/index';
 import { LoadingComponent } from './componentes/shared/loading/loading.component';
 import { CurriculumComponent } from './componentes/curriculum/curriculum.component';
 import { VivoComponent } from './componentes/vivo/vivo.component';
+import { SocketComponent } from './servicios/socket/socket.component';
 
 
 
@@ -41,6 +42,7 @@ import { VivoComponent } from './componentes/vivo/vivo.component';
     LoadingComponent,
     CurriculumComponent,
     VivoComponent,
+    SocketComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,6 @@ import { VivoComponent } from './componentes/vivo/vivo.component';
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
     EffectsModule.forRoot(EffectsArray),
-    // VimeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -15,9 +15,10 @@ export class VivoComponent implements OnInit {
       var videoElement: HTMLMediaElement = <HTMLMediaElement>document.getElementById('videoElement');
       var flvPlayer = flvjs.createPlayer({
         type: 'flv',
-        url: 'http://155.138.240.226:8000/live/stream.flv?sign=1910072595-5ac3ddbcb62facf35314033c8bfc8198'
+        url: 'https://9cea-2806-2f0-3340-57e1-9cd3-7cc3-245b-ab1b.ngrok.io/live/stream.flv?sign=1910072595-5ac3ddbcb62facf35314033c8bfc8198',
       });
       flvPlayer.attachMediaElement(videoElement);
+      // videoElement.muted = true;
       flvPlayer.load();
       flvPlayer.play();
     }
